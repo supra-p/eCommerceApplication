@@ -49,6 +49,7 @@ public class ProductController {
         return ResponseEntity.ok(productResponse);
     }
 
+//    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/admin/categories/{categoryId}/product")
     public ResponseEntity<ProductDto> addProduct(@RequestBody ProductDto productDto,
                                                  @PathVariable Long categoryId){
